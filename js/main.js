@@ -149,3 +149,39 @@ if (footerContainer) {
   const footerBottom = footerContainer.querySelector('.footer-bottom');
   footerContainer.insertBefore(footerLinks, footerBottom || null);
 }
+
+const regionData = {
+  merkez: ['Merkez bölgesi', 'Çankaya, Altındağ ve çevresindeki adresler için yerinde destek, cihaz teslim seçenekleri veya uzaktan çözüm planlanabilir.', 'Planlama uygunsa', 'Uygun', 'Planlanabilir'],
+  sincan: ['Batı bölgeler', 'Sincan ve Etimesgut adreslerinde bağlantı, bilgisayar, kamera ve işletme destekleri için planlı yerinde ziyaret değerlendirilebilir.', 'Randevu ile', 'Uygun', 'Planlanabilir'],
+  yenimahalle: ['Batı Kuzey bölgesi', 'Yenimahalle ve çevresinde modem, Wi-Fi, bilgisayar, kamera ve dijital çözümler için yerinde veya uzaktan hizmet planlanır.', 'Planlama uygunsa', 'Uygun', 'Planlanabilir'],
+  kecioren: ['Kuzey Doğu bölgesi', 'Keçiören, Pursaklar ve çevresindeki ev veya işletme adresleri için teknik inceleme ve kurumsal destek planlanabilir.', 'Randevu ile', 'Uygun', 'Uygun'],
+  dogu: ['Doğu bölgeler', 'Mamak, Altındağ ve çevresinde cihaz arızası, ağ bağlantısı ve görüntü sistemi sorunları için destek planlanabilir.', 'Planlama uygunsa', 'Uygun', 'Planlanabilir'],
+  golbasi: ['Güney bölgesi', 'Gölbaşı ve çevresinde uzaklık, hizmet kapsamı ve randevu durumuna göre yerinde destek veya uzaktan çözüm belirlenir.', 'Adrese göre', 'Uygun', 'Planlanabilir'],
+  guney: ['Güney çevre ilçeler', 'Haymana, Bala ve çevresinde yerinde ziyaret önceden planlanır; yazılım ve yapılandırma işleri uzaktan ilerleyebilir.', 'Ön planlama ile', 'Uygun', 'Planlanabilir'],
+  kuzey: ['Uzak kuzey ilçeler', 'Bölgenin mesafe ve trafik koşullarına göre yerinde destek planlanır; uygun yazılım sorunları uzaktan çözülebilir.', 'Adrese göre', 'Uygun', 'Planlanabilir']
+};
+
+const regionDetail = document.querySelector('[data-region-detail]');
+if (regionDetail && document.querySelectorAll('[data-region], [data-district]').length) {
+  const activateRegion = (key) => {
+    const data = regionData[key];
+    if (!data) return;
+    document.querySelectorAll('[data-region]').forEach((chip) => chip.classList.toggle('is-active', chip.dataset.region === key));
+    document.querySelectorAll('[data-district]').forEach((district) => district.classList.toggle('is-active', district.dataset.district === key));
+    regionDetail.querySelector('[data-region-title]').textContent = data[0];
+    regionDetail.querySelector('[data-region-summary]').textContent = data[1];
+    regionDetail.querySelector('[data-region-onsite]').textContent = data[2];
+    regionDetail.querySelector('[data-region-remote]').textContent = data[3];
+    regionDetail.querySelector('[data-region-business]').textContent = data[4];
+  };
+
+  document.querySelectorAll('[data-region]').forEach((chip) => chip.addEventListener('click', () => activateRegion(chip.dataset.region)));
+  document.querySelectorAll('[data-district]').forEach((district) => {
+    district.style.cursor = 'pointer';
+    district.addEventListener('click', () => activateRegion(district.dataset.district));
+    district.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') activateRegion(district.dataset.district);
+    });
+  });
+  activateRegion('merkez');
+}

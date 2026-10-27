@@ -670,6 +670,49 @@ textarea { min-height: 130px; resize: vertical; }
 :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
 input:focus, textarea:focus, select:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(49, 93, 232, .14); outline: 0; }
 
+/* Ankara hizmet bölgeleri */
+.regions-overview { padding-top: 42px; }
+.region-explorer { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; }
+.region-map-panel { overflow: hidden; border: 1px solid var(--color-border); border-radius: 20px; background: linear-gradient(145deg, #fff 0%, #f5f7fc 100%); box-shadow: 0 18px 50px rgba(23,34,54,.07); }
+.map-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 30px 0; }
+.map-heading h2 { margin: 0; font-size: clamp(1.45rem, 2vw, 1.85rem); }
+.map-status { display: inline-flex; align-items: center; gap: 8px; color: var(--color-success); font-size: .78rem; font-weight: 700; white-space: nowrap; }
+.map-status i { width: 8px; height: 8px; border-radius: 50%; background: #2ea981; box-shadow: 0 0 0 5px rgba(46,169,129,.12); }
+.ankara-map { position: relative; padding: 18px 20px 12px; }
+.ankara-map svg { width: 100%; max-height: 570px; }
+.map-outline { fill: #edf1f8; stroke: #fff; stroke-width: 9; }
+.district { stroke: #fff; stroke-width: 5; cursor: pointer; transition: opacity .18s ease, filter .18s ease, transform .18s ease; transform-box: fill-box; transform-origin: center; }
+.district:hover, .district.is-active { filter: brightness(.98); transform: scale(1.018); }
+.districts:has(.district:not(.is-active):hover) .district:not(:hover) { opacity: .72; }
+.district--north { fill: #b9c9f6; }.district--blue { fill: #91aaf0; }.district--coral { fill: #f4bba7; }
+.district--active { fill: #315de8; }.district--mint { fill: #9dcfbf; }.district--orange { fill: #efc18d; }
+.district--violet { fill: #c4b3e2; }.district--green { fill: #91c4a8; }
+.districts text { fill: #fff; font-family: var(--font-heading); font-size: 13px; font-weight: 800; text-anchor: middle; pointer-events: none; }
+.districts text[data-light="true"] { fill: #273448; }
+.map-routes path { fill: none; stroke: rgba(49,93,232,.42); stroke-width: 2; stroke-dasharray: 7 8; }
+.map-routes circle { fill: #fff; stroke: var(--color-primary); stroke-width: 4; }.map-routes circle:last-child { fill: none; opacity: .28; }
+.region-detail { display: flex; min-height: 100%; flex-direction: column; align-items: flex-start; padding: 34px; border-radius: 20px; background: var(--color-ink); box-shadow: 0 18px 50px rgba(23,34,54,.16); color: #fff; }
+.region-detail-kicker { margin-bottom: 42px; color: #9db5ff; font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.region-detail h2 { color: #fff; font-size: clamp(1.7rem, 2.3vw, 2.15rem); }.region-detail > p { color: #bec5d3; }
+.region-detail-list { width: 100%; margin: 26px 0 30px; border-top: 1px solid rgba(255,255,255,.1); }
+.region-detail-list div { display: flex; justify-content: space-between; gap: 12px; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: .82rem; }
+.region-detail-list span { color: #9da7bb; }.region-detail-list strong { color: #fff; text-align: right; }
+.region-detail .button { margin-top: auto; width: 100%; }
+.region-selector-section { padding-top: 60px; background: #fff; }
+.region-chip-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.region-chip { display: grid; min-height: 106px; align-content: center; gap: 5px; padding: 18px 20px; border: 1px solid var(--color-border); border-radius: 12px; background: #fff; color: var(--color-ink); font-size: 1rem; font-weight: 800; text-align: left; cursor: pointer; transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.region-chip span { color: var(--color-muted); font-size: .78rem; font-weight: 600; }
+.region-chip:hover { transform: translateY(-2px); border-color: #bdc9f1; box-shadow: 0 12px 28px rgba(49,93,232,.08); }
+.region-chip.is-active { border-color: var(--color-primary); background: #f3f6ff; color: var(--color-primary); box-shadow: inset 0 -3px 0 var(--color-primary); }
+.region-solutions { background: #edf1f7; }
+.solution-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #ced5e2; }
+.solution-grid article { display: grid; grid-template-columns: 46px 1fr; gap: 18px; padding: 34px 28px 12px 0; border-right: 1px solid #d4dae5; }
+.solution-grid article + article { padding-left: 28px; }.solution-grid article:last-child { border-right: 0; }
+.solution-grid article > span { color: var(--color-primary); font-size: .75rem; font-weight: 800; }
+.solution-grid h3 { margin-bottom: 12px; }.solution-grid p { color: var(--color-muted); font-size: .92rem; }.solution-grid a { font-size: .84rem; font-weight: 750; }
+.region-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 36px 40px; border-radius: 18px; background: #fff; box-shadow: 0 12px 35px rgba(23,34,54,.07); }
+.region-cta h2 { margin-bottom: 8px; }.region-cta p { max-width: 690px; color: var(--color-muted); }.region-cta .button { flex: 0 0 auto; }
+
 @media (max-width: 1120px) {
   .container { width: min(var(--container), calc(100% - 40px)); }
   .header-inner { gap: 16px; }
@@ -748,6 +791,26 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary); 
   .footer-site-grid { gap: 24px; }
   .footer-bottom { display: block; margin-top: 18px; }
   .footer-bottom span { display: block; margin-top: 7px; }
+}
+
+@media (max-width: 980px) {
+  .region-explorer { grid-template-columns: 1fr; }
+  .region-detail { min-height: 460px; }
+  .region-chip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .regions-overview { padding-top: 26px; }
+  .map-heading { align-items: flex-start; flex-direction: column; padding: 22px 20px 0; }
+  .ankara-map { padding-inline: 6px; }
+  .region-detail { min-height: 0; padding: 28px 24px; }
+  .region-detail-kicker { margin-bottom: 28px; }
+  .region-chip-grid { grid-template-columns: 1fr; }
+  .region-chip { min-height: 92px; }
+  .solution-grid { grid-template-columns: 1fr; }
+  .solution-grid article { border-right: 0; border-bottom: 1px solid #d4dae5; padding: 28px 0; }
+  .solution-grid article + article { padding-left: 0; }.solution-grid article:last-child { border-bottom: 0; }
+  .region-cta { align-items: stretch; flex-direction: column; padding: 28px 24px; }
+  .region-cta .button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
