@@ -25,9 +25,20 @@
 
   <section class="section regions-overview">
     <div class="container region-explorer">
-      <div class="region-map-panel">
+      <div class="coverage-panel">
         <div class="map-heading"><div><span class="eyebrow">Ankara genelinde</span><h2>Bölgeye göre destek alanı</h2></div><span class="map-status"><i></i> Hizmet planlaması açık</span></div>
-        <div class="ankara-map" role="img" aria-label="Ankara ilçe sınırlarının gösterildiği gerçekçi bölge haritası">
+        <div class="coverage-network" aria-label="Ankara teknik destek bölge ağı">
+          <div class="coverage-ring coverage-ring--outer"></div>
+          <div class="coverage-ring coverage-ring--inner"></div>
+          <button class="coverage-zone coverage-zone--northwest" type="button" data-region="yenimahalle"><strong>Batı Kuzey</strong><span>Yenimahalle</span></button>
+          <button class="coverage-zone coverage-zone--north" type="button" data-region="kecioren"><strong>Kuzey</strong><span>Keçiören · Pursaklar</span></button>
+          <button class="coverage-zone coverage-zone--west" type="button" data-region="sincan"><strong>Batı</strong><span>Sincan · Etimesgut</span></button>
+          <button class="coverage-zone coverage-zone--east" type="button" data-region="dogu"><strong>Doğu</strong><span>Mamak · Elmadağ</span></button>
+          <button class="coverage-zone coverage-zone--south" type="button" data-region="golbasi"><strong>Güney</strong><span>Gölbaşı</span></button>
+          <button class="coverage-center" type="button" data-region="merkez"><span>ANKARA</span><strong>Merkez</strong><small>Çankaya · Altındağ</small></button>
+        </div>
+        <div class="coverage-footnote"><span>Yerinde destek</span><span>Uzaktan çözüm</span><span>Kurumsal hizmet</span></div>
+        <div class="ankara-map" role="img" aria-label="Ankara ilçe sınırlarının gösterildiği gerçekçi bölge haritası" hidden>
           <svg viewBox="0 0 620 560" aria-hidden="true">
             <defs><filter id="districtShadow"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-opacity=".12"/></filter></defs>
             <!-- İlçe sınırları: coskunomer/Turkish-Cities-Geojson-Dataset (MIT) -->
