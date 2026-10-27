@@ -19,6 +19,20 @@
   <meta name="twitter:description" content="Teknik destek kapsamı, uzaktan erişim, veri yedekleme ve hizmet bölgeleri hakkında sık sorulan soruların yanıtlarını inceleyin.">
   <meta name="twitter:image" content="https://baskentdestek.com/assets/images/baskent-destek-logo.png">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Hangi hizmetin sorunum için uygun olduğunu nasıl belirlerim?","acceptedAnswer":{"@type":"Answer","text":"Cihazın türünü, görülen belirtileri ve sorunun süresini paylaşarak en uygun teknik destek alanını belirleyebilirsiniz. Kapsam net değilse iletişimden ön değerlendirme talep edebilirsiniz."}},
+      {"@type":"Question","name":"Teknik destek ücreti nasıl belirlenir?","acceptedAnswer":{"@type":"Answer","text":"Ücret; arıza kapsamı, gerekli inceleme, kullanılan zaman, ekipman ve yerinde çalışma unsurlarına göre belirlenir. İşlem başlamadan önce kapsam ve ücret hakkında bilgilendirme yapılır."}},
+      {"@type":"Question","name":"Format veya sıfırlama işleminde dosyalarım silinir mi?","acceptedAnswer":{"@type":"Answer","text":"İşletim sistemi kurulumu, format ve fabrika ayarı işlemlerinde dosyalar silinebilir. İşlem öncesinde güvenli bir yedekleme yapılması gerekir."}},
+      {"@type":"Question","name":"Uzaktan desteğe onay vermeden bağlantı başlatılır mı?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Uzaktan destek yalnızca açık kullanıcı izniyle ve bağlantı süreci birlikte başlatıldığında yapılır."}},
+      {"@type":"Question","name":"Yerinde hizmet Ankara'nın tüm ilçelerinde sunuluyor mu?","acceptedAnswer":{"@type":"Answer","text":"Uygunluk adres, mesafe, planlama ve talep edilen hizmet türüne göre teyit edilir."}},
+      {"@type":"Question","name":"WhatsApp üzerinden destek alınabilir mi?","acceptedAnswer":{"@type":"Answer","text":"WhatsApp üzerinden cihaz bilgisi, görülen hata ve ilçe bilgisiyle ön değerlendirme talebi gönderilebilir. Parola ve hassas doğrulama kodları paylaşılmamalıdır."}}
+    ]
+  }
+  </script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -40,34 +54,69 @@
     </div>
   </header>
   <main id="icerik">
-    <header class="page-hero">
-      <div class="container page-hero-inner">
-        
-        
-        <h1>Teknik destek hakkında sıkça sorulan sorular</h1>
-        <p class="lead">Hizmet kapsamı, veri güvenliği, uzaktan erişim ve bölge planlaması hakkında temel bilgiler.</p>
-      </div>
-    </header>
-    <section class="section">
-      <div class="container content-grid">
-        <article class="article faq">
-          <h2>Hizmet ve ön değerlendirme</h2>
-          <details><summary>Hangi hizmetin sorunum için uygun olduğunu nasıl anlarım?</summary><p>Cihazı, görülen belirtiyi, sorunun ne zaman başladığını ve etkilenen diğer cihazları not edin. <a href="hizmetler/index.html">Hizmetler sayfasında</a> konuya göre ilgili destek alanını seçebilir; kapsam net değilse iletişimden önce sorununuzu kısaca tarif edebilirsiniz.</p></details>
-          <details><summary>Yerinde hizmet Ankara'nın her ilçesinde kesin olarak sunuluyor mu?</summary><p>Yerinde çalışma uygunluğu adres, hizmet türü ve planlamaya göre teyit edilmelidir. <a href="hizmet-bolgeleri.html">Hizmet bölgeleri sayfası</a> genel bilgilendirme sunar; belirli bir tarih veya her bölge için kesin hizmet garantisi vermez.</p></details>
-          <details><summary>Fiyat ve işlem süresi nedir?</summary><p>Ücret ve süre cihaz, arızanın kapsamı ve gerekli işlemlere göre değişebilir. İnceleme ve kapsam netleşmeden kesin fiyat veya süre taahhüdü verilmemelidir.</p></details>
-          <h2>Veri ve uzaktan erişim</h2>
-          <details><summary>Format öncesinde dosyalarım silinir mi?</summary><p>Biçimlendirme işleminde veriler silinebilir. Önemli dosyaları önceden yedekleyin ve yedekleme durumu netleşmeden geri döndürülemez işlem için onay vermeyin.</p></details>
-          <details><summary>Uzaktan bağlantı izinsiz başlatılır mı?</summary><p>Hayır. Uzaktan destek yalnızca açık izninizle, kapsamı açıklanmış güvenli bir yöntemle ve siz bağlantıyı sonlandırabilecek durumdayken yapılmalıdır. Oturum sırasında parola veya gereksiz hassas bilgileri paylaşmayın.</p></details>
-          <details><summary>İletişim formu veya WhatsApp üzerinden destek alınabilir mi?</summary><p>Mevcut statik sürümde çalışan form veya doğrulanmış WhatsApp numarası bulunmuyor. Gerçek iletişim bilgileri eklendiğinde <a href="iletisim.html">iletişim sayfası</a> güncellenmelidir.</p></details>
-        </article>
-        <aside class="sidebar">
-          <div class="sidebar-box">
-            <h3>İlgili sayfalar</h3>
-            <ul><li><a href="hizmetler/index.html">Tüm hizmetler</a></li><li><a href="hizmet-bolgeleri.html">Hizmet bölgeleri</a></li><li><a href="iletisim.html">İletişim</a></li></ul>
-          </div>
-        </aside>
+    <section class="faq-intro">
+      <div class="container faq-intro-grid">
+        <div>
+          <span class="eyebrow eyebrow--light">Destek bilgileri</span>
+          <h1>Merak ettiğiniz soruları<br>net yanıtlarla topladık.</h1>
+        </div>
+        <div class="faq-intro-copy">
+          <p>Hizmetler, randevu, fiyatlandırma, veri güvenliği ve uzaktan destek hakkında en sık karşılaşılan soruları cevapladık.</p>
+          <a href="iletisim.html" class="button button--light">Sorunuzun cevabını bulamadınız mı?</a>
+        </div>
       </div>
     </section>
+
+    <section class="section faq-page-section">
+      <div class="container faq-layout">
+        <aside class="faq-index" aria-label="Soru kategorileri">
+          <span class="faq-index-label">Kategoriler</span>
+          <a href="#hizmet-ve-randevu">Hizmet ve randevu <small>5</small></a>
+          <a href="#fiyat-ve-sure">Fiyat ve süre <small>4</small></a>
+          <a href="#cihaz-ve-veri">Cihaz ve veri <small>5</small></a>
+          <a href="#uzaktan-ve-bolge">Uzaktan destek ve bölge <small>5</small></a>
+        </aside>
+
+        <div class="faq-content">
+          <section class="faq-group" id="hizmet-ve-randevu">
+            <div class="faq-group-heading"><span>01</span><div><p>Başlangıç</p><h2>Hizmet ve randevu</h2></div></div>
+            <details open><summary>Hangi hizmetin sorunum için uygun olduğunu nasıl belirlerim?</summary><div><p>Cihazın veya sistemin türünü, görülen belirtileri ve sorunun ne zamandır devam ettiğini göz önünde bulundurun. <a href="hizmetler/index.html">Hizmetler sayfasındaki</a> kategorilerden en yakın alanı seçebilirsiniz; emin değilseniz sorununuzu kısa ve anlaşılır biçimde iletişim kanalımıza gönderebilirsiniz.</p></div></details>
+            <details><summary>Bilgisayarım başlamıyorsa öncelikle ne yapmalıyım?</summary><div><p>Kabloları güvenli biçimde kontrol edebilir, harici cihazları çıkarabilir ve işletim sistemine ulaşılabiliyorsa beklenmedik kapanma veya hata geçmişine bakabilirsiniz. Sıvı temasında makineyi kapatın ve açmayın; geniş kapsamlı teşhis için <a href="hizmetler/bilgisayar-teknik-servisi.html">bilgisayar teknik servisi</a> desteğini kullanabilirsiniz.</p></div></details>
+            <details><summary>Randevu için cihazın yanımda olması gerekiyor mu?</summary><div><p>Yerinde inceleme planlanırken cihaz, modem, kamera veya diğer teknik ekipmanın bulunduğu yerde olması gerekir. Masaüstü bilgisayar, aksesuar veya yedek parça ihtiyacı olan durumlarda önce telefonla kısa ön değerlendirme yapılabilir.</p></div></details>
+            <details><summary>Acil veya aynı gün destek alabilir miyim?</summary><div><p>Uygunluk; günün yoğunluğu, hizmet türü, konum ve teknisyen planlamasına göre değişir. Kesin aciliyet taahhüdü yerine telefonla ulaşarak mevcut uygunluk ve tahmini zaman aralığını öğrenebilirsiniz.</p></div></details>
+            <details><summary>Kurumsal işletmelere düzenli BT desteği sunuluyor mu?</summary><div><p>Evet. İşletme bilgisayarları, ağ, yazıcı, kablo düzeni ve güvenlik kameraları gibi ihtiyaçlar için tek seferlik veya dönemsel hizmet planı değerlendirebilir. İhtiyaçları belirlemek için <a href="hizmetler/isletmelere-teknik-destek.html">işletmelere teknik destek</a> sayfasını inceleyebilirsiniz.</p></div></details>
+          </section>
+
+          <section class="faq-group" id="fiyat-ve-sure">
+            <div class="faq-group-heading"><span>02</span><div><p>Planlama</p><h2>Fiyat ve süre</h2></div></div>
+            <details><summary>Teknik destek ücreti nasıl belirlenir?</summary><div><p>Ücret; arıza veya talebin kapsamı, gerekli inceleme, kullanılan zaman, ekipman ve yerinde çalışma gibi unsurlar dikkate alınarak belirlenir. İşlem başlamadan önce kapsam ve ücret aralığı hakkında bilgilendirme yapılır.</p></div></details>
+            <details><summary>Arızayı teşhis etmek ücretli midir?</summary><p>Hizmet türüne göre ön inceleme, teşhis veya yerinde değerlendirme farklı değerlendirilebilir. Başlamadan önce uygulanan yöntem ve olası ücret aralığı hakkında bilgi alınmalıdır.</p></details>
+            <details><summary>İşlem ne kadar sürer?</summary><div><p>Süre sorunun türüne ve cihazın durumuna göre değişir. Basit yazılım veya ağ ayarları kısa sürebilir; veri kurtarma, işletim sistemi kurulumu veya karmaşık ağ kurulumu daha uzun zaman gerektirebilir. Tahmini sürenin yanı sıra beklenen teslim aşaması önceden açıklanır.</p></div></details>
+            <details><summary>Fiyatı telefonla net olarak öğrenebilir miyim?</summary><div><p>Bazı standart hizmetlerde yaklaşık bilgi verilebilir; ancak somut teşhis yapılmadan kesin fiyat vermek doğru olmaz. Belirti, cihaz ve gerçekleştirilen işlemler netleştiğinde kapsam ve ücret teyit edilir.</p></div></details>
+          </section>
+
+          <section class="faq-group" id="cihaz-ve-veri">
+            <div class="faq-group-heading"><span>03</span><div><p>Güvenlik</p><h2>Cihaz ve veri</h2></div></div>
+            <details><summary>Format veya sıfırlama işleminde dosyalarım silinir mi?</summary><div><p>İşletim sistemi kurulumu, tam format ve fabrika ayarı işlemlerinde dosyaların silinmesi beklenen veya olası bir sonuçtur. İşlem öncesinde mevcut verilerin yedeği alınmalı, ulaşılamayan veriler için kurtarma ihtimali ayrı değerlendirilmelidir.</p></div></details>
+            <details><summary>Dosyalarımın yedeğini almama yardımcı olunur mu?</summary><div><p>Evet. Cihaz sağlık durumuna ve veri erişimine bağlı olarak dış sürücüye, buluta veya kullanıcı tarafından seçilen güvenli bir ortama yedekleme yapılabilir. Ancak cihazın fiziksel arızası veri kaybını zaten tetiklemiş olabilir.</p></div></details>
+            <details><summary>Virüs temizliği kişisel dosyalarımı siler mi?</summary><div><p>Virüs taraması ve temizliği dosyalarınızı normalde silmeyi amaçlamaz; ancak temizleme araçları bazı zararlı veya bozuk dosyaları kaldırabilir. İşlemden önce önemli dosyaların yedeğini almak ve WhatsApp veya formda gerekçesiz dosya göndermemek güvenlidir.</p></div></details>
+            <details><summary>Parolamı paylaşmak zorunda mıyım?</summary><div><p>İşlem kapsamında gerekli olduğunda erişim bilgisi alınabilir; ancak parola isteyen kişiye güvenmeden önce kimlik ve kanal doğrulanmalıdır. Oturum sürecinde mümkünse kullanıcı hesabı ile erişim sağlanmalı ve işlem sonunda parola değiştirilmelidir.</p></div></details>
+            <details><summary>Cihazımın fiziksel arızası için veri kurtarma garantisi var mı?</summary><div><p>Hayır. Veri kurtarma, cihazın arızasına, diskin veya belleğin durumuna, kullanılan müdahaleye ve daha önce yapılan işlemlere göre değişir. En güvenli yaklaşım; cihazı tekrar tekrar açmak yerine profesyonel değerlendirmeye başvurmaktır.</p></div></details>
+          </section>
+
+          <section class="faq-group" id="uzaktan-ve-bolge">
+            <div class="faq-group-heading"><span>04</span><div><p>Erişim</p><h2>Uzaktan destek ve bölge</h2></div></div>
+            <details><summary>Uzaktan desteğe onay vermeden bağlantı başlatılır mı?</summary><div><p>Hayır. Uzaktan destek yalnızca sizin onayınızla ve süreci birlikte başlattığınızda yapılır. Oturum sırasında ekranda görülen işlemleri takip edebilir, bağlantıyı istediğiniz anda sonlandırabilirsiniz.</p></div></details>
+            <details><summary>Uzaktan destek ile hangi sorunlar çözülebilir?</summary><div><p>Yazılım kurulumu, ayar düzenleme, virüs ve performans kontrolleri, yazıcı sorunu, e-posta yapılandırması, internet ayarı gibi işlem gerektirmeyen ve sistem erişimiyle çözülebilen sorunlar uzaktan değerlendirilebilir. Donanım veya fiziksel müdahale gerektiren sorunlar yerinde veya serviste ele alınır.</p></div></details>
+            <details><summary>Yerinde hizmet Ankara'nın tüm ilçelerinde sunuluyor mu?</summary><div><p>Uygunluk adres, mesafe, teknik ekibin planlaması ve talep edilen hizmet türüne göre teyit edilir. <a href="hizmet-bolgeleri.html">Hizmet bölgeleri sayfasından</a> genel kapsamı inceleyebilir; kesin ziyaret planı için iletişime geçilebilir.</p></div></details>
+            <details><summary>WhatsApp üzerinden destek alınabilir mi?</summary><div><p>Evet, <a href="iletisim.html">iletişim sayfasındaki</a> WhatsApp bağlantısını kullanarak cihaz modeli, görülen hata, örnek ekran görüntüsü ve ilçe bilgisiyle ön değerlendirme talebi gönderebilirsiniz. Hassas parola, banka bilgisi veya kimlik doğrulama kodu paylaşmayın.</p></div></details>
+            <details><summary>Mesai saatleri dışında iletişim kurulabilir mi?</summary><div><p>Telefon ve mesaj kanalları normal çalışma saatleri olan her gün 10:00-22:00 arasında daha hızlı yanıtlanır. Mesai dışı gönderilen talepler bir sonraki çalışma döneminde incelenebilir.</p></div></details>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact"><div class="container faq-contact-cta"><div><span class="eyebrow">Hala yanıt mı arıyorsunuz?</span><h2>Sorununuzu anlaşılır biçimde anlatın; doğru destek alanını birlikte belirleyelim.</h2></div><div><a class="button" href="iletisim.html">İletişime geçin</a><a class="button button--outline" href="hizmetler/index.html">Hizmetleri inceleyin</a></div></div></section>
   </main>
   <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 Başkent Destek</span></div></div></footer>
 </body>

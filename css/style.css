@@ -645,6 +645,53 @@ textarea { min-height: 130px; resize: vertical; }
 .faq details { border-bottom: 1px solid var(--color-border); }
 .faq summary { padding: 18px 0; color: var(--color-ink); font-weight: 750; cursor: pointer; }
 .faq details p { padding-bottom: 18px; }
+
+.faq-intro { overflow: hidden; background: var(--color-ink); color: white; }
+.faq-intro-grid { min-height: 390px; display: grid; grid-template-columns: 1.35fr .65fr; align-items: end; gap: 60px; padding-top: 64px; padding-bottom: 64px; }
+.faq-intro h1 { max-width: 760px; color: white; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .98; }
+.faq-intro-copy { padding-bottom: 8px; }
+.faq-intro-copy p { margin-bottom: 26px; color: #cad3e1; font-size: 1.08rem; }
+.button--light { border-color: white; background: white; color: var(--color-ink); }
+.faq-page-section { padding-top: 84px; }
+.faq-layout { display: grid; grid-template-columns: 220px minmax(0, 760px); justify-content: space-between; gap: 70px; }
+.faq-index { position: sticky; top: 110px; align-self: start; }
+.faq-index-label { display: block; margin-bottom: 18px; color: var(--color-muted); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.faq-index a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid var(--color-border); color: var(--color-ink); font-size: .92rem; font-weight: 700; }
+.faq-index small { color: var(--color-primary); }
+.faq-content { min-width: 0; }
+.faq-group { padding-bottom: 28px; }
+.faq-group + .faq-group { margin-top: 54px; }
+.faq-group-heading { display: grid; grid-template-columns: 60px 1fr; align-items: end; gap: 18px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); }
+.faq-group-heading > span { color: var(--color-primary); font-size: 1.8rem; font-weight: 800; }
+.faq-group-heading p { margin-bottom: 2px; color: var(--color-muted); font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.faq-group-heading h2 { margin: 0; }
+.faq-group details { border-top: 1px solid var(--color-border); }
+.faq-group details:last-child { border-bottom: 1px solid var(--color-border); }
+.faq-group summary { position: relative; padding: 22px 48px 22px 0; font-size: 1.05rem; font-weight: 750; list-style: none; cursor: pointer; }
+.faq-group summary::-webkit-details-marker { display: none; }
+.faq-group summary::after { position: absolute; right: 3px; top: 20px; width: 26px; height: 26px; border: 1px solid var(--color-border); border-radius: 50%; content: '+'; color: var(--color-primary); font-size: 18px; font-weight: 500; line-height: 24px; text-align: center; }
+.faq-group details[open] summary::after { content: '−'; }
+.faq-group details > div, .faq-group details > p { padding: 0 48px 22px 0; color: var(--color-muted); }
+.faq-group details > div p { margin: 0; }
+.faq-contact-cta { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; padding: 42px 48px; border-radius: 18px; background: #edf2ff; }
+.faq-contact-cta h2 { max-width: 720px; }
+.faq-contact-cta > div:last-child { display: flex; flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 980px) {
+  .faq-intro-grid { grid-template-columns: 1fr; gap: 28px; min-height: 340px; }
+  .faq-layout { grid-template-columns: 180px minmax(0, 1fr); gap: 40px; }
+}
+@media (max-width: 680px) {
+  .faq-intro-grid { min-height: 0; padding-top: 52px; padding-bottom: 52px; }
+  .faq-intro h1 { font-size: 2.55rem; }
+  .faq-page-section { padding-top: 48px; }
+  .faq-layout { grid-template-columns: 1fr; gap: 42px; }
+  .faq-index { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+  .faq-index-label { grid-column: 1 / -1; }
+  .faq-group-heading { grid-template-columns: 46px 1fr; }
+  .faq-group summary { font-size: 1rem; }
+  .faq-contact-cta { grid-template-columns: 1fr; align-items: start; padding: 28px 24px; }
+}
 .guide-meta { display: flex; flex-wrap: wrap; gap: 16px; color: var(--color-muted); font-size: .88rem; }
 .article-cover { width: 100%; aspect-ratio: 16/7; margin-bottom: 28px; border-radius: 13px; background: #e1e5ec; object-fit: cover; }
 .map-placeholder { display: grid; min-height: 280px; place-items: center; padding: 30px; border: 1px solid var(--color-border); border-radius: 13px; background: repeating-linear-gradient(135deg, #edf0f5 0, #edf0f5 18px, #e6eaf0 18px, #e6eaf0 36px); text-align: center; }
