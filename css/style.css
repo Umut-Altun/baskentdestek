@@ -102,7 +102,8 @@ p:last-child { margin-bottom: 0; }
   top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(225, 229, 236, .9);
-  background: rgba(255, 255, 255, .96);
+  background: rgba(255, 255, 255, .98);
+  backdrop-filter: blur(14px);
 }
 .header-inner { display: flex; min-height: 78px; align-items: center; gap: 24px; }
 .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 11px; color: var(--color-ink); text-decoration: none; }
@@ -133,17 +134,21 @@ p:last-child { margin-bottom: 0; }
 .nav-list { display: flex; align-items: center; gap: 2px; margin: 0; padding: 0; list-style: none; }
 .nav-list a {
   display: block;
-  padding: 9px 10px;
+  padding: 10px 12px;
   border-radius: 8px;
   color: #344055;
-  font-size: .81rem;
+  font-size: .82rem;
   font-weight: 700;
+  letter-spacing: -.01em;
   text-decoration: none;
   transition: color .18s ease, background .18s ease;
 }
 .nav-list a:hover, .nav-list a[aria-current] { background: #edf1ff; color: var(--color-primary); }
-.nav-list a[href$="iletisim.html"] { margin-left: 6px; padding-inline: 16px; background: var(--color-primary); color: white; }
-.nav-list a[href$="iletisim.html"]:hover { background: var(--color-primary-dark); }
+.nav-list a[href$="iletisim.html"],
+.nav-list a.nav-contact { margin-left: 8px; padding-inline: 18px; background: var(--color-primary); box-shadow: 0 7px 18px rgba(49, 93, 232, .18); color: white; }
+.nav-list a[href$="iletisim.html"]:hover,
+.nav-list a.nav-contact:hover { background: var(--color-primary-dark); color: white; }
+.nav-list a[aria-current]:not(.nav-contact) { box-shadow: inset 0 -2px 0 var(--color-primary); }
 .nav-toggle {
   display: none;
   width: 44px;
@@ -409,9 +414,9 @@ p:last-child { margin-bottom: 0; }
 }
 .page-hero::after,
 .page-hero .breadcrumb { display: none; }
-.page-hero-inner { padding: 68px 0 12px; }
-.page-hero h1 { max-width: 780px; margin-bottom: 12px; font-size: clamp(1.9rem, 3vw, 2.45rem); }
-.page-hero .lead { max-width: 740px; margin: 0; font-size: 1rem; }
+.page-hero-inner { padding: 62px 0 18px; }
+.page-hero h1 { max-width: 780px; margin-bottom: 14px; font-size: clamp(2rem, 3vw, 2.55rem); }
+.page-hero .lead { max-width: 720px; margin: 0; color: var(--color-muted); font-size: 1.02rem; line-height: 1.68; }
 .service-detail-intro {
   position: relative;
   overflow: hidden;
@@ -424,7 +429,7 @@ p:last-child { margin-bottom: 0; }
 }
 .service-detail-intro .container { position: static; }
 .service-detail-intro .section-heading { margin-bottom: 0; }
-.service-detail-intro .service-directory-heading h1 { max-width: 850px; margin-bottom: 12px; font-size: clamp(1.9rem, 3vw, 2.45rem); }
+.service-detail-intro .service-directory-heading h1 { max-width: 850px; margin-bottom: 14px; font-size: clamp(2rem, 3vw, 2.55rem); }
 .service-detail-intro .service-directory-heading > p { max-width: 740px; margin: 0; font-size: 1rem; }
 .service-detail-intro + .section { padding-top: 54px; }
 .category-subservices { background: #f8f9fc; }
@@ -666,7 +671,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary); 
   .primary-nav.is-open { display: block; }
   .nav-list { display: block; }
   .nav-list a { padding: 12px; border-radius: 8px; font-size: .94rem; }
-  .nav-list a[href$="iletisim.html"] { margin: 6px 0 0; text-align: center; }
+  .nav-list a[href$="iletisim.html"],
+  .nav-list a.nav-contact { margin: 6px 0 0; text-align: center; }
   html:not(.js-ready) .nav-toggle { display: none; }
   html:not(.js-ready) .primary-nav { display: block; position: static; padding: 0; border: 0; background: transparent; box-shadow: none; }
   html:not(.js-ready) .nav-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }

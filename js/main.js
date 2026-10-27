@@ -35,10 +35,11 @@ if (primaryNav) {
     link.href = `${sitePrefix}${path}`;
     link.textContent = label;
     if (section === activeSection) {
-      const currentPath = window.location.pathname.replace(/\/$/, '/index.html');
-      const linkPath = new URL(link.href).pathname.replace(/\/$/, '/index.html');
-      link.setAttribute('aria-current', currentPath === linkPath ? 'page' : 'location');
+      const normalizedCurrentPath = window.location.pathname.replace(/\/$/, '/index.html').replace(/\/baskentdestek(?=\/)/, '');
+      const normalizedLinkPath = new URL(link.href).pathname.replace(/\/$/, '/index.html').replace(/\/baskentdestek(?=\/)/, '');
+      link.setAttribute('aria-current', normalizedCurrentPath === normalizedLinkPath ? 'page' : 'location');
     }
+    if (section === 'contact') link.className = 'nav-contact';
     item.append(link);
     list.append(item);
   });
@@ -76,7 +77,7 @@ if (footerContainer) {
   const footerGroups = [
     {
       title: 'Başkent Destek',
-      description: 'Sincan, Yenimahalle ve çevresinde yerinde ve uzaktan teknik destek. Pzt-Paz 10:00-22:00. Tel: 0553 327 28 74 · rehberyazilimtr@gmail.com'
+      description: 'Sincan, Yenimahalle ve çevresinde yerinde ve uzaktan teknik destek. Pzt-Paz 10:00-22:00. Tel: 0553 327 28 74 · rehberyazilimtr@gmail.com',
       links: []
     },
     {
