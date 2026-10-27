@@ -218,6 +218,8 @@ p:last-child { margin-bottom: 0; }
 .hero h1 { max-width: 710px; font-size: clamp(2.35rem, 3.7vw, 3rem); line-height: 1.12; }
 .hero .lead { max-width: 650px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-assurance { display: flex; align-items: center; gap: 9px; margin-top: 18px; color: #536074; font-size: .84rem; }
+.hero-assurance span { display: grid; width: 21px; height: 21px; place-items: center; border-radius: 50%; background: #e4eaff; color: var(--color-primary); font-weight: 800; }
 .hero-illustration {
   position: relative;
   width: min(100%, 560px);
@@ -291,6 +293,14 @@ p:last-child { margin-bottom: 0; }
   0%, 100% { opacity: .82; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.55); }
 }
+.home-trust-strip { border-top: 1px solid #e2e6ef; border-bottom: 1px solid #e2e6ef; background: #fff; }
+.home-trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.home-trust-grid > div { display: grid; grid-template-columns: 34px 1fr; column-gap: 12px; align-items: center; padding: 21px 26px; border-right: 1px solid #e5e8ef; }
+.home-trust-grid > div:first-child { padding-left: 0; }
+.home-trust-grid > div:last-child { border-right: 0; }
+.home-trust-grid span { grid-row: 1 / span 2; color: var(--color-primary); font-size: .72rem; font-weight: 800; letter-spacing: .08em; }
+.home-trust-grid strong { font-size: .86rem; }
+.home-trust-grid small { color: var(--color-muted); font-size: .76rem; }
 .home-service-menu {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -712,6 +722,9 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary); 
   .hero-actions { gap: 10px; margin-top: 24px; }
   .hero-actions .button { width: 100%; }
   .hero-illustration { width: min(100%, 440px); }
+  .home-trust-grid { grid-template-columns: 1fr; }
+  .home-trust-grid > div { padding: 16px 0; border-right: 0; border-bottom: 1px solid #e5e8ef; }
+  .home-trust-grid > div:last-child { border-bottom: 0; }
   .home-service-menu { grid-template-columns: 1fr; gap: 10px; }
   .home-service-menu a { min-height: 78px; padding: 13px 14px; }
   .breadcrumb { margin-bottom: 14px; font-size: .78rem; }
