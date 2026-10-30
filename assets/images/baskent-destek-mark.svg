@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Başkent Destek logo işareti</title>
+  <desc id="desc">Mavi teknoloji sembolü ve teknik destek anahtarı içeren sade Başkent Destek logosu.</desc>
+  <rect width="512" height="512" rx="112" fill="#2349C6"/>
+  <path fill="#fff" d="M132 92h138c84 0 136 42 136 105 0 42-23 73-63 91 50 15 78 50 78 99 0 78-59 123-154 123H132V92Zm96 77v86h43c34 0 53-16 53-44 0-27-19-42-53-42h-43Zm0 157v107h55c38 0 60-19 60-53 0-35-22-54-60-54h-55Z"/>
+  <path fill="#2349C6" d="M338 176a65 65 0 0 0-85 75l-78 78a28 28 0 1 0 40 40l78-78a65 65 0 0 0 84-74l-55 55-30-8-8-30 54-58Z"/>
+  <circle cx="367" cy="350" r="18" fill="#2349C6"/>
+</svg>
