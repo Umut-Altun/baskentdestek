@@ -501,6 +501,15 @@ p:last-child { margin-bottom: 0; }
 .service-directory-heading { max-width: 780px; margin-bottom: 30px; }
 .service-directory-heading h1 { margin-bottom: 12px; font-size: clamp(1.9rem, 3vw, 2.45rem); }
 .service-directory-heading > p { max-width: 680px; margin: 0; color: var(--color-muted); }
+.service-quick-picker { margin-bottom: 24px; padding: 18px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-white); box-shadow: var(--shadow-card); }
+.service-picker-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.service-picker-heading strong { font-size: 1rem; }
+.service-picker-heading span { color: var(--color-muted); font-size: .82rem; }
+.service-picker-options { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 3px; scrollbar-width: thin; scroll-snap-type: x proximity; }
+.service-picker-option { min-height: 44px; flex: 0 0 auto; padding: 9px 14px; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-white); color: var(--color-text); font-weight: 700; cursor: pointer; scroll-snap-align: start; }
+.service-picker-option:hover, .service-picker-option:focus-visible { border-color: var(--color-primary); color: var(--color-primary); }
+.service-picker-option.is-active { border-color: var(--color-primary); background: var(--color-primary); color: var(--color-white); }
+.service-category[hidden] { display: none !important; }
 .service-index {
   display: inline-flex;
   align-self: flex-start;
@@ -1021,6 +1030,10 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary); 
   .card::before { left: 24px; }
   .service-category, .subservice-card { min-height: 0; }
   .service-category { padding: 24px; }
+  .service-quick-picker { margin-right: -16px; margin-left: -16px; padding: 14px 16px; border-right: 0; border-left: 0; border-radius: 0; }
+  .service-picker-heading { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .service-picker-options { margin-right: -16px; padding-right: 16px; }
+  .service-picker-option { min-height: 46px; }
   .home-step, .home-principle, .home-audience .card { min-height: 0; padding: 24px; }
   .home-step .home-step-number { margin-bottom: 16px; }
   .service-category h2 { max-width: 82%; font-size: 1.3rem; }
