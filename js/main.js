@@ -153,32 +153,6 @@ if (footerContainer) {
   footerContainer.insertBefore(footerLinks, footerBottom || null);
 }
 
-const servicePicker = document.querySelector('[data-service-picker]');
-if (servicePicker) {
-  const cards = Array.from(document.querySelectorAll('[data-service-category]'));
-  const buttons = Array.from(servicePicker.querySelectorAll('[data-service-filter]'));
-  const result = servicePicker.querySelector('[data-service-result]');
-
-  const filterServices = (filter) => {
-    let visibleCount = 0;
-    cards.forEach((card) => {
-      const visible = filter === 'all' || card.dataset.serviceCategory === filter;
-      card.hidden = !visible;
-      if (visible) visibleCount += 1;
-    });
-    buttons.forEach((button) => {
-      const selected = button.dataset.serviceFilter === filter;
-      button.classList.toggle('is-active', selected);
-      button.setAttribute('aria-pressed', String(selected));
-    });
-    if (result) result.textContent = filter === 'all' ? 'Aşağıdaki 9 hizmet alanı' : `${visibleCount} hizmet alanı gösteriliyor`;
-  };
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => filterServices(button.dataset.serviceFilter));
-  });
-}
-
 const guideSearch = document.querySelector('[data-guide-search]');
 if (guideSearch) {
   const cards = Array.from(document.querySelectorAll('[data-guide-card]'));
