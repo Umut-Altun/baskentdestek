@@ -2,6 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://baskentdestek.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://baskentdestek.com/hizmetler/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/bilgisayar-neden-yavaslar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/windows-guncellemesinden-sonra-bilgisayar-acilmiyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/bilgisayar-viruslu-mu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/bilgisayar-format-ne-zaman-gerekir.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/ssd-ve-hdd-arasindaki-fark.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/bilgisayar-kapaniyor-veya-yeniden-basliyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/dokunmatik-ekran-ve-laptop-guc-sorunu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/wifi-interneti-kopuyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/evde-belirli-odalarda-internet-cekmiyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/modem-isiklari-ne-anlama-geliyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/internet-hizi-iyi-ama-baglanti-kopuyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/5-ghz-ve-24-ghz-farki.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/vpn-veya-oyun-baglanti-sorunlari.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/ev-agina-guvenli-kurulum.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/guvenlik-kameralari-internetten-izlenmiyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/kamera-kayit-yapmiyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/gece-goruntusu-net-degil.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/nvr-dvr-sifresi-unutuldu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/mobil-cihazdan-kamera-erisim.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/kamera-kablosu-veya-kablosuz-sorunu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/eski-kamerayi-yeni-sisteme-ekleme.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/uydu-sinyali-yok-veya-kayboluyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/uydu-kanal-listesi-silindi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/televizyon-internete-baglanmiyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/uydu-cihazi-kutu-hatasi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/canak-veya-lnb-arizasi-belirtileri.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/smart-tv-uygulamalari-acilmiyor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/isletme-bilgisayarlarinda-veri-yedekleme.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/personel-birimlerinde-ag-kurulum-hatalari.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/kasa-bilgisayari-ve-yazici-sorunlari.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/isletmede-yeni-bilgisayar-ve-ag-altyapisi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/isyeri-wifi-kapsama-alani-iyilestirme.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baskentdestek.com/rehber/internet-kesintisinde-is-surekliligi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://baskentdestek.com/hizmetler/bilgisayar-teknik-servisi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://baskentdestek.com/hizmetler/modem-wifi-ag-destegi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://baskentdestek.com/hizmetler/guvenlik-kamerasi-destegi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

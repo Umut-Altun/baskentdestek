@@ -3,10 +3,11 @@ document.documentElement.classList.add('js-ready');
 const navToggle = document.querySelector('[data-nav-toggle]');
 const primaryNav = document.querySelector('[data-primary-nav]');
 
-const sitePrefix = /\/hizmetler\//.test(window.location.pathname) ? '../' : '';
+const sitePrefix = /\/(?:hizmetler|rehber)\//.test(window.location.pathname) ? '../' : '';
 const navigationLinks = [
   { label: 'Ana Sayfa', path: 'index.html', section: 'home' },
   { label: 'Hizmetler', path: 'hizmetler/index.html', section: 'services' },
+  { label: 'Teknik Rehberler', path: 'rehber/index.html', section: 'guides' },
   { label: 'Hizmet Bölgeleri', path: 'hizmet-bolgeleri.html', section: 'areas' },
   { label: 'Hakkımızda', path: 'hakkimizda.html', section: 'about' },
   { label: 'Sıkça Sorulan Sorular', path: 'sss.html', section: 'faq' },
@@ -15,7 +16,8 @@ const navigationLinks = [
 
 function currentSection() {
   const path = window.location.pathname;
-  if (/\/(?:index\.html)?$/.test(path) && !/\/hizmetler\/index\.html$/.test(path)) return 'home';
+  if (/\/(?:index\.html)?$/.test(path) && !/\/(?:hizmetler|rehber)\/index\.html$/.test(path)) return 'home';
+  if (/\/rehber\//.test(path)) return 'guides';
   if (/\/hizmetler\//.test(path)) return 'services';
   if (/\/hizmet-bolgeleri\.html$/.test(path)) return 'areas';
   if (/\/hakkimizda\.html$/.test(path)) return 'about';
@@ -84,6 +86,7 @@ if (footerContainer) {
       title: 'Hizmetler',
       links: [
         ['Tüm hizmetler', 'hizmetler/index.html'],
+      ['Teknik rehberler', 'rehber/index.html'],
         ['Bilgisayar teknik servisi', 'hizmetler/bilgisayar-teknik-servisi.html'],
         ['Modem, Wi-Fi ve ağ', 'hizmetler/modem-wifi-ag-destegi.html'],
         ['Güvenlik kamerası', 'hizmetler/guvenlik-kamerasi-destegi.html'],
@@ -148,6 +151,43 @@ if (footerContainer) {
   footerLinks.append(footerGrid);
   const footerBottom = footerContainer.querySelector('.footer-bottom');
   footerContainer.insertBefore(footerLinks, footerBottom || null);
+}
+
+const guideSearch = document.querySelector('[data-guide-search]');
+if (guideSearch) {
+  const cards = Array.from(document.querySelectorAll('[data-guide-card]'));
+  const categories = Array.from(document.querySelectorAll('[data-guide-category]'));
+  const count = document.querySelector('[data-guide-count]');
+  const status = document.querySelector('[data-guide-status]');
+
+  const filterGuides = () => {
+    const query = guideSearch.value.trim().toLocaleLowerCase('tr');
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const searchable = card.textContent.toLocaleLowerCase('tr');
+      const visible = !query || searchable.includes(query);
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+
+    categories.forEach((category) => {
+      const categoryVisible = !query || Boolean(category.querySelector('[data-guide-card]:not([hidden])'));
+      category.classList.toggle('is-empty', !categoryVisible);
+    });
+
+    if (count) count.textContent = query ? `${visibleCount} sonuç` : `${cards.length} rehber`;
+    if (status) status.textContent = query ? `${visibleCount} rehber bulundu.` : '';
+  };
+
+  guideSearch.addEventListener('input', filterGuides);
+  document.querySelectorAll('[data-clear-guide-search]').forEach((button) => {
+    button.addEventListener('click', () => {
+      guideSearch.value = '';
+      filterGuides();
+      guideSearch.focus();
+    });
+  });
 }
 
 const regionData = {
