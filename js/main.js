@@ -153,43 +153,6 @@ if (footerContainer) {
   footerContainer.insertBefore(footerLinks, footerBottom || null);
 }
 
-const guideSearch = document.querySelector('[data-guide-search]');
-if (guideSearch) {
-  const cards = Array.from(document.querySelectorAll('[data-guide-card]'));
-  const categories = Array.from(document.querySelectorAll('[data-guide-category]'));
-  const count = document.querySelector('[data-guide-count]');
-  const status = document.querySelector('[data-guide-status]');
-
-  const filterGuides = () => {
-    const query = guideSearch.value.trim().toLocaleLowerCase('tr');
-    let visibleCount = 0;
-
-    cards.forEach((card) => {
-      const searchable = card.textContent.toLocaleLowerCase('tr');
-      const visible = !query || searchable.includes(query);
-      card.hidden = !visible;
-      if (visible) visibleCount += 1;
-    });
-
-    categories.forEach((category) => {
-      const categoryVisible = !query || Boolean(category.querySelector('[data-guide-card]:not([hidden])'));
-      category.classList.toggle('is-empty', !categoryVisible);
-    });
-
-    if (count) count.textContent = query ? `${visibleCount} sonuç` : `${cards.length} rehber`;
-    if (status) status.textContent = query ? `${visibleCount} rehber bulundu.` : '';
-  };
-
-  guideSearch.addEventListener('input', filterGuides);
-  document.querySelectorAll('[data-clear-guide-search]').forEach((button) => {
-    button.addEventListener('click', () => {
-      guideSearch.value = '';
-      filterGuides();
-      guideSearch.focus();
-    });
-  });
-}
-
 const regionData = {
   merkez: ['Merkez bölgesi', 'Çankaya, Altındağ ve çevresindeki adresler için yerinde destek, cihaz teslim seçenekleri veya uzaktan çözüm planlanabilir.', 'Planlama uygunsa', 'Uygun', 'Planlanabilir'],
   sincan: ['Batı bölgeler', 'Sincan ve Etimesgut adreslerinde bağlantı, bilgisayar, kamera ve işletme destekleri için planlı yerinde ziyaret değerlendirilebilir.', 'Randevu ile', 'Uygun', 'Planlanabilir'],
